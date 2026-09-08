@@ -41,8 +41,12 @@ export interface Service {
 }
 
 export const business = {
-  // Nome exatamente como consta no perfil público do Google Maps
-  name: "VIPPET Banho e Tosa",
+  // Nome de exibição da marca (conforme solicitado pelo responsável da empresa)
+  name: "VIPPET",
+
+  // Logo oficial da empresa, fornecida diretamente pelo responsável do negócio.
+  // Arquivo em /public/logo.jpg — referencie como "/logo.jpg" nos componentes.
+  logo: "/logo.jpg",
 
   // Categoria/segmento identificado publicamente (o próprio nome do
   // estabelecimento e sites de diretório o classificam neste segmento)
@@ -77,10 +81,8 @@ export const business = {
   // Ao preencher, use apenas dígitos com DDI+DDD, ex: "556199999999".
   phone: null as string | null,
 
-  // TODO (não confirmado publicamente): número de WhatsApp da empresa.
-  // Preencha SOMENTE se tiver certeza de que é WhatsApp. Formato: DDI+DDD+número,
-  // apenas dígitos, ex: "556199999999" (o site monta o link wa.me automaticamente).
-  whatsapp: null as string | null,
+  // Número de WhatsApp confirmado pelo responsável pela empresa.
+  whatsapp: "5561992494478" as string | null,
 
   // TODO (não confirmado publicamente): horário de funcionamento.
   // Preencha por dia da semana, ex.:
@@ -104,12 +106,33 @@ export const business = {
     // { name: "Tosa higiênica", description: "..." },
   ],
 
-  // TODO (não confirmado publicamente): avaliações reais do Google.
-  // Copie o texto e a nota exatamente como aparecem no perfil público, ex.:
-  // reviews: [
-  //   { author: "Fulano da Silva", rating: 5, text: "...", date: "há 2 meses" },
-  // ],
-  reviews: [] as Review[],
+  // Avaliações reais de 5 estrelas, copiadas do perfil público do Google Maps.
+  reviews: [
+    {
+      author: "Regiane Alves",
+      rating: 5,
+      text: "Super indico, o Roger cuida muito bem da minha Crystal deixa ela branquinha.",
+      date: "há 1 mês",
+    },
+    {
+      author: "Ana Luiza Resende",
+      rating: 5,
+      text: "Sou cliente fiel a mais de 10 anos. Roger cuida da minha filha como se fosse dele...",
+      date: "há 4 anos",
+    },
+    {
+      author: "Cristiane Alves Moreira",
+      rating: 5,
+      text: "Meus cachorros são super bem atendidos, o Roger é um excelente profissional!",
+      date: "há 5 anos",
+    },
+    {
+      author: "Maria Eduarda Correa",
+      rating: 5,
+      text: "Melhor pet da região. Tosa perfeita. Atendimento maravilhoso.",
+      date: "há 2 anos",
+    },
+  ] as Review[],
 
   // TODO (não confirmado publicamente / sem acesso técnico às fotos do
   // perfil): nenhuma foto real do estabelecimento foi incorporada. As

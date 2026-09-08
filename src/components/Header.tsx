@@ -18,8 +18,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-clay-200/70 bg-cream/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#inicio" className="font-display text-xl text-sage-800">
-          {business.name}
+        <a href="#inicio" className="flex items-center gap-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={business.logo}
+            alt={`Logo ${business.name}`}
+            className="h-11 w-auto rounded-md sm:h-12"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
